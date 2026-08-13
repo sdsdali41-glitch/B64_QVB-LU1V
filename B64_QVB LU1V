@@ -1,205 +1,200 @@
 <div class="remain">
+
     <div class="redirect">
-        <div class="ops">
 
-            <style>
-                .license-error-page {
-                    direction: rtl;
-                    min-height: 100vh;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 25px;
-                    box-sizing: border-box;
-                    background: #f6f7fb;
-                    font-family: "Cairo", Tahoma, Arial, sans-serif;
+        <style>
+            .license-page{
+                direction:rtl;
+                width:100%;
+                min-height:100vh;
+                box-sizing:border-box;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                padding:30px 18px;
+                background:#f5f6f8;
+                font-family:Tahoma,Arial,sans-serif;
+            }
+
+            .license-card{
+                width:100%;
+                max-width:620px;
+                background:#fff;
+                border:1px solid #e8e8e8;
+                border-radius:24px;
+                padding:45px 35px;
+                text-align:center;
+                box-sizing:border-box;
+                box-shadow:0 18px 55px rgba(0,0,0,.09);
+            }
+
+            .license-warning{
+                width:78px;
+                height:78px;
+                margin:0 auto 24px;
+                border-radius:50%;
+                background:#fff0f0;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+
+            .license-warning svg{
+                width:40px;
+                height:40px;
+                fill:none;
+                stroke:#e53935;
+                stroke-width:1.8;
+                stroke-linecap:round;
+                stroke-linejoin:round;
+            }
+
+            .license-title{
+                margin:0 0 15px;
+                color:#202124;
+                font-size:25px;
+                font-weight:700;
+                line-height:1.6;
+            }
+
+            .license-text{
+                margin:0 auto;
+                max-width:500px;
+                color:#6b7078;
+                font-size:15px;
+                line-height:2;
+            }
+
+            .license-link{
+                color:#e53935;
+                text-decoration:none;
+                font-weight:700;
+            }
+
+            .license-link:hover{
+                text-decoration:underline;
+            }
+
+            .license-info{
+                margin-top:28px;
+                padding:15px 17px;
+                border-radius:13px;
+                background:#f8f9fa;
+                border:1px solid #eceef0;
+                color:#70757c;
+                font-size:13px;
+                line-height:1.8;
+            }
+
+            .license-bottom{
+                margin-top:23px;
+                color:#a0a4aa;
+                font-size:11px;
+            }
+
+            @media(max-width:600px){
+
+                .license-page{
+                    padding:18px 12px;
                 }
 
-                .license-error-card {
-                    width: 100%;
-                    max-width: 620px;
-                    background: #ffffff;
-                    border: 1px solid #e9eaf0;
-                    border-radius: 24px;
-                    padding: 42px 35px;
-                    text-align: center;
-                    box-sizing: border-box;
-                    box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
+                .license-card{
+                    padding:35px 20px;
+                    border-radius:20px;
                 }
 
-                .license-icon {
-                    width: 78px;
-                    height: 78px;
-                    margin: 0 auto 25px;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: #fff1f1;
-                    color: #e53935;
+                .license-warning{
+                    width:68px;
+                    height:68px;
                 }
 
-                .license-icon svg {
-                    width: 38px;
-                    height: 38px;
-                    stroke: currentColor;
-                    fill: none;
-                    stroke-width: 1.8;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
+                .license-warning svg{
+                    width:34px;
+                    height:34px;
                 }
 
-                .license-title {
-                    margin: 0 0 15px;
-                    color: #202124;
-                    font-size: 25px;
-                    font-weight: 700;
-                    line-height: 1.6;
+                .license-title{
+                    font-size:21px;
                 }
 
-                .license-description {
-                    margin: 0 auto 28px;
-                    max-width: 500px;
-                    color: #70757d;
-                    font-size: 15px;
-                    line-height: 2;
+                .license-text{
+                    font-size:14px;
                 }
+            }
 
-                .license-description a {
-                    color: #e53935;
-                    text-decoration: none;
-                    font-weight: 700;
-                    transition: .2s ease;
-                }
+            .domains{
+                display:none!important;
+            }
+        </style>
 
-                .license-description a:hover {
-                    text-decoration: underline;
-                }
 
-                .license-notice {
-                    display: flex;
-                    align-items: center;
-                    gap: 12px;
-                    text-align: right;
-                    background: #f8f9fb;
-                    border: 1px solid #eceef2;
-                    border-radius: 14px;
-                    padding: 14px 16px;
-                    margin-top: 25px;
-                    color: #62666d;
-                    font-size: 13px;
-                }
+        <div class="license-page">
 
-                .license-notice svg {
-                    flex: 0 0 auto;
-                    width: 21px;
-                    height: 21px;
-                    stroke: #e53935;
-                    fill: none;
-                    stroke-width: 2;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                }
+            <div class="license-card">
 
-                .license-footer {
-                    margin-top: 25px;
-                    color: #a0a4aa;
-                    font-size: 12px;
-                }
+                <div class="license-warning">
 
-                .domains {
-                    display: none !important;
-                }
+                    <svg viewBox="0 0 24 24">
 
-                @media (max-width: 600px) {
+                        <path d="M12 3L2.8 20h18.4L12 3z"></path>
 
-                    .license-error-page {
-                        padding: 18px;
-                    }
+                        <path d="M12 9v5"></path>
 
-                    .license-error-card {
-                        padding: 32px 22px;
-                        border-radius: 20px;
-                    }
+                        <path d="M12 17.5h.01"></path>
 
-                    .license-icon {
-                        width: 68px;
-                        height: 68px;
-                    }
+                    </svg>
 
-                    .license-icon svg {
-                        width: 32px;
-                        height: 32px;
-                    }
+                </div>
 
-                    .license-title {
-                        font-size: 21px;
-                    }
 
-                    .license-description {
-                        font-size: 14px;
-                    }
-                }
-            </style>
+                <h2 class="license-title">
+                    عفواً! هذا القالب غير مرخص
+                </h2>
 
-            <div class="license-error-page">
 
-                <div class="license-error-card">
+                <p class="license-text">
 
-                    <div class="license-icon">
+                    هذا القالب غير مفعل لهذه المدونة.
+                    إذا حصلت على القالب بشكل غير قانوني
+                    أو وجدته في أحد المواقع الأخرى،
+                    فيجب تفعيله من طرف مالكه الأصلي.
 
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 3L2.8 20h18.4L12 3z"></path>
-                            <path d="M12 9v5"></path>
-                            <path d="M12 17.5h.01"></path>
-                        </svg>
+                    <a
+                        class="license-link"
+                        href="https://www.facebook.com/profile.php?id=100003496997733"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        تفعيل القالب
+                    </a>
 
-                    </div>
+                </p>
 
-                    <h2 class="license-title">
-                        عفواً! هذا القالب غير مرخص
-                    </h2>
 
-                    <p class="license-description">
-                        يبدو أن هذا القالب غير مفعل لهذه المدونة.
-                        إذا حصلت على القالب بشكل غير قانوني أو وجدته
-                        في أحد المواقع الأخرى، يرجى تفعيل الترخيص
-                        من طرف مالكه الأصلي
-                        <a href="https://www.facebook.com/profile.php?id=100003496997733"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            من هنا
-                        </a>.
-                    </p>
+                <div class="license-info">
 
-                    <div class="license-notice">
+                    لم يتم العثور على ترخيص صالح لهذا النطاق.
+                    يرجى التواصل مع مالك القالب لتفعيل الترخيص.
 
-                        <svg viewBox="0 0 24 24">
-                            <circle cx="12" cy="12" r="9"></circle>
-                            <path d="M12 10v6"></path>
-                            <path d="M12 7h.01"></path>
-                        </svg>
+                </div>
 
-                        <span>
-                            لم يتم العثور على ترخيص صالح لهذا النطاق.
-                        </span>
 
-                    </div>
-
-                    <div class="license-footer">
-                        نظام حماية وترخيص القالب
-                    </div>
-
+                <div class="license-bottom">
+                    نظام حماية وترخيص القالب
                 </div>
 
             </div>
 
-            <!-- قائمة الدومينات التي يعتمد عليها نظام الحماية -->
-            <ul class="domains">
-                <li>google.com</li>
-            </ul>
-
         </div>
+
+
+        <!-- مهم جداً: لا تحذف هذه القائمة -->
+        <ul class="domains">
+
+            <li>google.com</li>
+
+        </ul>
+
     </div>
+
 </div>
