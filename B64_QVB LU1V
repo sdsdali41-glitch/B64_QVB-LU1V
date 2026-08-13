@@ -1,21 +1,205 @@
 <div class="remain">
-<div class="redirect">
-<div class="ops">
-<style>
-.header-panel{text-align:center;font-size:19px;font-family:cairo;background:#fff;color:#666;padding:0;margin:0 auto;width:100%}
-</style>
-<div class="header-panel">
-<div class="activetheme">
-<h2>عفوا ! هذا القالب غير مرخص لهذه المدونة</h2>
-<h4>
-	 هذا القالب اذا حصلت عليه بشكل غير قانوني او وجدته في احد المواقع الاخرى فيجب ان يتم تفعيله من طرف مالكه الأصلي<a href="https://www.facebook.com/profile.php?id=100003496997733">من هنا</a>
-	</h4>
-	</div>
-</div>
+    <div class="redirect">
+        <div class="ops">
 
-</div>
-</div>
-<ul class="domains">
-<li>google.com</li>
-</ul>
+            <style>
+                .license-error-page {
+                    direction: rtl;
+                    min-height: 100vh;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 25px;
+                    box-sizing: border-box;
+                    background: #f6f7fb;
+                    font-family: "Cairo", Tahoma, Arial, sans-serif;
+                }
+
+                .license-error-card {
+                    width: 100%;
+                    max-width: 620px;
+                    background: #ffffff;
+                    border: 1px solid #e9eaf0;
+                    border-radius: 24px;
+                    padding: 42px 35px;
+                    text-align: center;
+                    box-sizing: border-box;
+                    box-shadow: 0 20px 60px rgba(0, 0, 0, .08);
+                }
+
+                .license-icon {
+                    width: 78px;
+                    height: 78px;
+                    margin: 0 auto 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #fff1f1;
+                    color: #e53935;
+                }
+
+                .license-icon svg {
+                    width: 38px;
+                    height: 38px;
+                    stroke: currentColor;
+                    fill: none;
+                    stroke-width: 1.8;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .license-title {
+                    margin: 0 0 15px;
+                    color: #202124;
+                    font-size: 25px;
+                    font-weight: 700;
+                    line-height: 1.6;
+                }
+
+                .license-description {
+                    margin: 0 auto 28px;
+                    max-width: 500px;
+                    color: #70757d;
+                    font-size: 15px;
+                    line-height: 2;
+                }
+
+                .license-description a {
+                    color: #e53935;
+                    text-decoration: none;
+                    font-weight: 700;
+                    transition: .2s ease;
+                }
+
+                .license-description a:hover {
+                    text-decoration: underline;
+                }
+
+                .license-notice {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    text-align: right;
+                    background: #f8f9fb;
+                    border: 1px solid #eceef2;
+                    border-radius: 14px;
+                    padding: 14px 16px;
+                    margin-top: 25px;
+                    color: #62666d;
+                    font-size: 13px;
+                }
+
+                .license-notice svg {
+                    flex: 0 0 auto;
+                    width: 21px;
+                    height: 21px;
+                    stroke: #e53935;
+                    fill: none;
+                    stroke-width: 2;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                }
+
+                .license-footer {
+                    margin-top: 25px;
+                    color: #a0a4aa;
+                    font-size: 12px;
+                }
+
+                .domains {
+                    display: none !important;
+                }
+
+                @media (max-width: 600px) {
+
+                    .license-error-page {
+                        padding: 18px;
+                    }
+
+                    .license-error-card {
+                        padding: 32px 22px;
+                        border-radius: 20px;
+                    }
+
+                    .license-icon {
+                        width: 68px;
+                        height: 68px;
+                    }
+
+                    .license-icon svg {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    .license-title {
+                        font-size: 21px;
+                    }
+
+                    .license-description {
+                        font-size: 14px;
+                    }
+                }
+            </style>
+
+            <div class="license-error-page">
+
+                <div class="license-error-card">
+
+                    <div class="license-icon">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 3L2.8 20h18.4L12 3z"></path>
+                            <path d="M12 9v5"></path>
+                            <path d="M12 17.5h.01"></path>
+                        </svg>
+
+                    </div>
+
+                    <h2 class="license-title">
+                        عفواً! هذا القالب غير مرخص
+                    </h2>
+
+                    <p class="license-description">
+                        يبدو أن هذا القالب غير مفعل لهذه المدونة.
+                        إذا حصلت على القالب بشكل غير قانوني أو وجدته
+                        في أحد المواقع الأخرى، يرجى تفعيل الترخيص
+                        من طرف مالكه الأصلي
+                        <a href="https://www.facebook.com/profile.php?id=100003496997733"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            من هنا
+                        </a>.
+                    </p>
+
+                    <div class="license-notice">
+
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M12 10v6"></path>
+                            <path d="M12 7h.01"></path>
+                        </svg>
+
+                        <span>
+                            لم يتم العثور على ترخيص صالح لهذا النطاق.
+                        </span>
+
+                    </div>
+
+                    <div class="license-footer">
+                        نظام حماية وترخيص القالب
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- قائمة الدومينات التي يعتمد عليها نظام الحماية -->
+            <ul class="domains">
+                <li>google.com</li>
+            </ul>
+
+        </div>
+    </div>
 </div>
